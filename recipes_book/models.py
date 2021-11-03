@@ -20,7 +20,7 @@ class Recipe(Model):
     description = fields.TextField()
     image_url = fields.CharField(max_length=1024)
     recipe_type = fields.CharField(max_length=50)
-    status = fields.BooleanField()
+    status = fields.BooleanField(default=True)
 
     def __str__(self):
         return self.name
